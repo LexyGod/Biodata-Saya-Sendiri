@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Selamat Datang Di Web Saya — Bagas Yudistira</title>
+  <style>
+    :root{
+      --bg:#0b0f19; --card:#121829; --muted:#a9b1c7; --text:#e6e9f2; --ring:rgba(91,156,255,.35)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;background:radial-gradient(1200px 600px at 10% -10%, rgba(91,156,255,.2), transparent), radial-gradient(1000px 500px at 90% 0%, rgba(126,240,212,.18), transparent), #0b0f19;color:var(--text);line-height:1.6}
+    a{color:inherit}
+    .container{max-width:920px;margin:0 auto;padding:28px 18px}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    .spacer{height:26px}
+    /* Rainbow animated text */
+    .rainbow{
+      font-weight:800;
+      background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bff95,#5ecbff,#b37dff,#ff6bcb,#ff6b6b);
+      background-size:400% 100%;
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+      animation:flow 8s linear infinite;
+      text-align:center
+    }
+    .rainbow.large{font-size:42px;line-height:1.15;margin:30px 0 8px}
+    .rainbow.thanks{font-size:28px;margin:26px 0 6px}
+    @keyframes flow { 0%{background-position:0 0} 100%{background-position:400% 0} }
+
+    /* Biodata */
+    section{scroll-margin-top:90px}
+    h2{font-size:28px;margin:0 0 14px}
+    dl{display:grid;grid-template-columns:190px 1fr;gap:10px 16px;margin:0}
+    dt{color:#cbd5ff}
+    dd{margin:0}
+
+    footer{margin-top:26px;text-align:center;color:#c7cce0}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- Judul berwarna-warni -->
+    <h1 class="rainbow large">Selamat Datang Di Web Saya</h1>
+
+    <div class="spacer"></div>
+
+    <!-- Biodata -->
+    <section id="biodata" class="card" aria-labelledby="judul-biodata">
+      <h2 id="judul-biodata">Biodata</h2>
+      <dl>
+        <dt>Nama</dt>
+        <dd>Bagas Yudistira</dd>
+
+        <dt>Kelas</dt>
+        <dd>XI PPLG 1</dd>
+
+        <dt>Alamat</dt>
+        <dd>Kalikuto, Candimulyo, Kertek, Wonosobo</dd>
+
+        <dt>Jenis Kelamin</dt>
+        <dd>Laki-Laki</dd>
+
+        <dt>Tempat/Tanggal Lahir</dt>
+        <dd>Wonosobo, 19 Mei 2008</dd>
+      </dl>
+    </section>
+
+    <!-- Ucapan terima kasih berwarna menarik -->
+    <h3 class="rainbow thanks">Terima Kasih Telah Mengunjungi Website Sayaa</h3>
+
+    <footer>
+      &copy; <span id="year"></span> Bagas Yudistira
+    </footer>
+  </main>
+
+  <script>
+    // isi tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
